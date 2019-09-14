@@ -29,14 +29,26 @@ def playSong():
 def stopSong():
     pygame.mixer.music.stop()
 
+
+def pauseSong():
+    pygame.mixer.music.pause()
+
+def unpauseSong():
+    pygame.mixer.music.unpause()
+
 var = StringVar()
 songTitle = Label(root, textvariable = var)
 
 PlayBtn = Button(root, width=5, height=3, text="Play", command=playSong)
 StopBtn = Button(root, width=5, height=3, text="Stop", command=stopSong)
+PauseBtn = Button(root, width=5, height=3, text="Pause", command=pauseSong)
+UnpauseBtn = Button(root, width=5, height=3, text="Unpause", command=unpauseSong)
+
 
 PlayBtn.pack(fill="x")
 StopBtn.pack(fill="x")
+PauseBtn.pack(fill="x")
+UnpauseBtn.pack(fill="x")
 songTitle.pack()
 playlist.pack(fill = "both", expand = "yes")
 
